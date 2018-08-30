@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backr"
+    android:orientation="vertical"
+    tools:context="com.example.yurdaer.kavun.ListViewFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonRef"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/refresh" />
+
+        <TextView
+            android:id="@+id/picker_1"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="@color/white"
+            android:hint="--/--/--"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/orange"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/picker2"
+            style="@android:style/Widget.Holo.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+
+            android:background="@color/white"
+            android:hint="--/--/--"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/orange"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        style="@style/Widget.AppCompat.ListView.DropDown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="true"
+        android:isScrollContainer="true"
+        tools:listitem="@layout/fragment_item_inc" />
+
+</LinearLayout>

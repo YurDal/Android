@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:gravity="center"
+    tools:context="com.example.yurdaer.bil.SearchRegFragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cv_search_bg"
+        >
+
+        <TextView
+            android:id="@+id/search_frag_tv_app_name"
+            style="@style/SearchReg_ScreenTitle" />
+
+        <ImageView
+            android:id="@+id/search_frag_iv_car"
+            style="@style/CarImageView"
+            app:srcCompat="@drawable/ic_car_24dp" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        style="@style/LinearLayout_Theme">
+
+        <EditText
+            android:id="@+id/search_frag_et_reg"
+            style="@style/SearchReg_TextView" />
+
+        <com.andexert.library.RippleView
+            rv_centered="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/search_frag_btn_search"
+                style="@style/Button_Search" />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+
+    <com.andexert.library.RippleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_search">
+
+        <Button
+            android:id="@+id/search_frag_btn_scan"
+            style="@style/Button_Scan" />
+    </com.andexert.library.RippleView>
+
+
+</RelativeLayout>
